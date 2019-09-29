@@ -1,0 +1,827 @@
+/*!
+*	Theme Name 		: CODER.BITS
+    Description		: CODER.BITS is Multipurpose Bootstrap Template to showcase your personal portfolio work, designed for professional freelancers, individual designers & developers.
+* 	Framework Type 	: Bootstrap / Foundation / Flexbox / Materialize
+*	Author 			: UIGRID
+*	Author Profile 	: http://www.uigrid.com/
+* 	Author Email 	: hello@uigrid.com
+*	Version 		: 1.0
+*/
+
+
+/*--------------------------------------------------------------
+	TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.	Import Google Font - Poppins
+2.	Default Styles
+	Text color Selection
+3.	Theme Button Styles
+4.	Reusable Classes
+		Background Color Styles
+		Hyperlink / text Color class
+5.	Preloader - Loading Animation 
+6.	Navbar - One page main menu
+	Logo - Brand Logo
+7.	Main Cover
+8.	About Me
+	Social media
+	Skills
+9.	Services - What I do
+10.	Project Counters
+11.	Portfolio - Works
+	Portfolio Items
+12.	Client Testimonials
+13.	Hire Me - Contact
+	copyright
+	Contact form style
+-------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+1.	Import Google Font - Poppins
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+
+
+/*--------------------------------------------------------------
+2.	Default Styles
+--------------------------------------------------------------*/
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: #ffffff;
+	color: #444444;
+	line-height: 1.6;
+	font-family: 'Poppins', Helvetica, arial, sans-serif;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+h1{ font-size: 36px;}
+h2{ font-size: 30px;}
+h3{ font-size: 24px;}
+h4{ font-size: 18px;}
+h5{ font-size: 14px;}
+h6{ font-size: 12px;}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, dl, table, pre {
+  padding: 0;
+  margin: 0px;
+  margin-bottom: 15px;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul, ol{list-style: none; margin: 0px; padding: 0px;}
+
+a{color: #444444; text-decoration: none;}
+a:hover{color: #2a2a2a; text-decoration: none;}
+a:focus, a:visited,a:active{outline: 0; text-decoration: none;}
+
+p{
+	font-size: 16px;
+	font-weight: 300;
+	color: #777777;
+}
+
+img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+section, footer{
+	padding: 70px 0px;
+	position: relative;
+	background-color: #ffffff;
+	border-bottom: 1px solid #fafafa;
+}
+
+
+/*--------------------------------------------------------------
+#	Text color Selection
+--------------------------------------------------------------*/
+::selection {
+	background-color: rgba(196, 45, 50, 0.68);
+	color: #fff;
+	text-shadow: none;
+}
+
+
+/*--------------------------------------------------------------
+3.	Button Styles
+--------------------------------------------------------------*/
+.btn{
+	padding: 10px 25px;
+	border-radius: 0px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	font-size: 1.1em;
+	/* Delay Transition on Hover */
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.btn:focus,.btn:hover, .btn:active{
+	color: #ffffff;
+	outline: 0px; 
+	text-decoration: none;
+	/* Delay Transition on Hover */
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+/* Default button for theme */
+.btn-default{
+	background-color: transparent;
+	border: 2px solid #444444;
+	color: #444444;
+}
+.btn-default:hover{
+	background-color: #444444;
+	color: #ffffff;
+	border: 2px solid #444444;
+}
+.btn-default:focus, .btn-default:active{
+	color: #444444;
+	background-color: #444444;
+}
+
+
+/*--------------------------------------------------------------
+#	Theme Button - Call to action button
+--------------------------------------------------------------*/
+.btn_cta{
+	background-color: #ec3237;
+	color: #ffffff;
+}
+.btn_cta:hover{background-color: #c62d32; color: #ffffff;}
+
+
+/* Button Inverse */
+.btn_inverse{
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+}
+.btn_inverse:hover{background-color: #ffffff;; color: #ec3237;}
+
+
+
+/*--------------------------------------------------------------
+4.	Reusable Classes
+--------------------------------------------------------------*/
+.wrapper{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.section_heading{
+	padding-bottom: 50px;
+}
+
+.section_title{
+	font-size: 2.5em;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+.section_subtitle{
+	font-weight: 300;
+}
+
+
+/*--------------------------------------------------------------
+#	Background Color Styles
+--------------------------------------------------------------*/
+.light_background{
+	background-color: #f5f5f5;
+}
+.dark_background{
+	background-color: #1a1a1a;
+	color: #ffffff;
+}
+
+.current{
+	border-bottom: 2px solid #ec3237;
+}
+.current a{
+	color: #ec3237 !important;
+}
+
+
+
+/*--------------------------------------------------------------
+#	Hyperlink / text Color class
+--------------------------------------------------------------*/
+.link{
+	display: inline-block;
+	color: #BF360C;
+}
+.link:hover{color: #c62d32;}
+
+.muted{ color: #777777;}
+
+
+
+/*--------------------------------------------------------------
+5.	Preloader - Loading Animation 
+--------------------------------------------------------------*/
+#Preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	z-index: 999999999;
+}
+
+#Status {
+	width: 100%;
+	padding: 30px 50px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	margin: -80px 0;
+}
+
+.message_title, .message_description{
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+/* Loading text flash animation */
+.loading{animation: blinker 1.5s linear infinite;}
+
+@keyframes blinker {  
+	50% { opacity: 0; }
+}
+
+
+
+/*--------------------------------------------------------------
+6.	Navbar - One page main menu
+--------------------------------------------------------------*/
+.navbar-inverse{
+	margin-bottom: 0px;
+	border: 0px;
+	border-radius: 0px;
+	background-color: #1a1a1a;
+	box-shadow: 0px 1px 3px rgba(42, 42, 42, 0.2);
+}
+
+.navbar-inverse .nav li a{
+	padding: 24px 25px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.navbar-inverse .nav li a:hover{
+	color: #ec3237;
+}
+
+
+/*--------------------------------------------------------------
+#	Logo - Brand Logo
+--------------------------------------------------------------*/
+.navbar-inverse .navbar-brand{
+	height: auto;
+	font-weight: 600;
+	color: #ffffff;
+	padding: 0px;
+}
+
+.brand_logo{
+	display: inline-block;
+	padding: 0px 10px;
+	width: 90px;
+	max-width: 90px;
+	height: 70px;
+	float: left;
+}
+
+.brand_title{
+	display: block;
+	padding: 25px 10px;
+	float: left;
+}
+
+
+/*--------------------------------------------------------------
+7.	Main Cover
+--------------------------------------------------------------*/
+.cover{
+	padding: 170px 0px;
+    height: 650px;
+    background: transparent;
+    background: url('../../assets/img/cover.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cover_wrap{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.cover_info{
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    display: table;
+    background-color: rgba(236, 51, 55, 0.7);
+    color: #FFF;
+}
+
+.cover_content{
+	display: table-cell;
+    vertical-align: middle;
+    color: #FFF;
+}
+
+
+
+.cover_title{
+	font-weight: 700;
+	font-size: 4em;
+	color: #ffffff;
+	text-shadow: 0px 5px 10px #af2424;
+}
+
+.cover_subtitle{color: #ffffff;}
+
+/* Cover Button */
+.cover_cta{margin-top: 15px;}
+
+.section_scroll{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    color: #ffffff;
+    /* Absolute Position Center */
+    transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0%);
+	-moz-transform: translate(-50%, 0%);
+	-o-transform: translate(-50%, 0%);
+	-ms-transform: translate(-50%, 0%);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 100%;
+    /* Floating Animation */
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+.section_scroll:hover{color: #ffffff;}
+a.section_scroll:focus, a:hover{color: #ffffff;outline: 0;}
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(-50%, 0px);}
+    50% {-webkit-transform:translate(-50%, 20px);}
+    to {-webkit-transform: translate(-50%, -0px);    }    
+}
+    
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(-50%, 0px);}
+    50% {-moz-transform:translate(-50%, 20px);}
+    to {-moz-transform: translate(-50%, -0px);}    
+}
+
+
+/*--------------------------------------------------------------
+8.	About Me
+--------------------------------------------------------------*/
+.profile{margin-bottom: 50px;}
+.profile_title{
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
+/*--------------------------------------------------------------
+#	Social Media Links
+--------------------------------------------------------------*/
+.social{
+	position: relative;
+	overflow-y: hidden;
+	margin: 10px 0px;
+	padding-top: 25px;
+	border-top: 1px solid #fafafa;
+}
+
+.social_ico li{
+	display: inline-block;
+}
+
+.social_ico li a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 42px;
+	margin-right: 10px;
+	margin-bottom: 15px;
+	font-size: 300;
+	text-align: center;
+	border: 1px solid #999999;
+	color: #777777;
+}
+
+.social_ico li a:hover{
+	background-color: #ec3237;
+	color: #ffffff;
+	border: 1px solid #ec3237;
+}
+
+.social_ico li a i{font-size: 1.4em;}
+
+
+/*--------------------------------------------------------------
+#	Social Media Links
+--------------------------------------------------------------*/
+.skill{
+	margin-top: 30px;
+	margin-bottom: 70px;
+	position: relative;
+	overflow: hidden;
+}
+
+.progress_wrap{
+	margin-top: 24px;
+}
+
+.progress{
+	height: 12px;
+	line-height: 12px;
+}
+
+.progress-bar{
+	background-color: #ec3237;
+}
+
+.progress_title{
+	display: inline-block;
+	color: #777777;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+
+
+/*--------------------------------------------------------------
+9.	SERVICES - WHAT I DO
+--------------------------------------------------------------*/
+.services{margin-bottom: 50px;}
+
+.service_wrap{
+	margin-bottom: 30px;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 	3px;
+	border: 1px solid #eeeeee;
+	box-shadow: 0px 1px 4px rgba(107, 69, 69, 0.050);
+}
+
+/* On Hover Services  Highlight Icon box*/
+.service_wrap:hover .service_icon{
+	background-color: #ec3237;
+	color: #ffffff;
+}
+
+
+.service_title{
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.service_wrap:hover .service_title{
+	color: #ec3237;
+}
+
+.service_icon{
+	width: 40px;
+	height: 40px;
+	line-height: 45px;
+	margin-bottom: 15px;
+	background-color: #eeeeee;
+	color: #777777;
+	text-align: center;
+}
+.service_icon i{font-size: 1.4em;}
+
+
+/*--------------------------------------------------------------
+10.	Project counter
+--------------------------------------------------------------*/
+.counter_box{
+	padding: 100px 0px;
+    background: transparent;
+    background: url('../../assets/img/project-counter.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.counter_wrap{
+	padding: 15px 0px;
+	border: 1px solid rgba(255,255,255,0.1);
+}
+
+.counter_icon{
+	width: 40px;
+	height: 40px;
+	line-height: 45px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	color: #ec3237;
+	text-align: center;
+}
+
+.counter{
+	font-size: 3em;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.counter_title{
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #ec3237;
+}
+
+
+/*--------------------------------------------------------------
+11.	Portfolio - Work
+--------------------------------------------------------------*/
+.portfolio_filter li{ display: inline-block; }
+.portfolio_filter li a{ 
+	display: block;
+	padding: 10px 20px;
+	margin-bottom: 30px;
+	color: #444444;
+	border: 2px solid #dddddd;
+	font-size: 1.1em;
+	font-weight: 600;
+}
+
+.portfolio_filter li a:hover{
+	color: #ec3237;
+	border: 2px solid #ec3237;
+}
+
+.portfolio_filter .active a{
+	background-color: #ec3237;
+	color: #ffffff !important;
+	border: 2px solid #ec3237;	
+}
+
+
+/*--------------------------------------------------------------
+#	Portfolio Items - Work
+--------------------------------------------------------------*/
+.portfolio{
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.portfolio_info{
+	padding: 0px 15px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+	border: 1px solid #eeeeee;
+	position: relative;
+	border-radius: 0px 0px 3px 3px;
+	box-shadow: 0px 1px 4px rgba(107, 69, 69, 0.050);
+}
+
+.portfolio_prev{
+  display: block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 100%;
+  margin: auto;
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translate3d( -50%, 0%, 0 );
+}
+.portfolio_prev:focus, .portfolio_prev:active{
+	color: #ffffff;
+}
+
+.portfolio_item:hover .portfolio_prev{
+	background-color: #ec3237;
+	color: #ffffff;
+}
+.portfolio_item:hover .portfolio_prev a{color: #ffffff;}
+
+.portfolio_title{
+	margin-bottom: 5px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.portfolio_category{
+	margin: 0px;
+}
+
+
+/*--------------------------------------------------------------
+12.	Client Testimonials
+--------------------------------------------------------------*/
+.testimonial_box{
+	padding: 70px 0px;
+    background: transparent;
+    background: url('../../assets/img/client-testimonial.jpg') center fixed;
+    background-position: center 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.testimonial_slider .testimonial_item{
+	padding: 0px 15px;
+}
+
+.testimonial_slider .testimonial_inner{
+	color: #ffffff;
+	cursor: move;
+}
+
+.testimonial_slider .avtar{
+	display: block;
+	margin-bottom: 15px;
+}
+
+.client_avtar{
+	border: 6px solid #ec3237;
+}
+
+.item_description{
+	color: #ffffff;
+	padding: 0px 30px;
+}
+
+.client_name{
+	color: #ec3237;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.carousel-control.left, .carousel-control.right{
+	background-color: transparent;
+	background-image: none;
+	filter: none;
+}
+
+
+/*--------------------------------------------------------------
+13.	Hire Me - Contact 
+--------------------------------------------------------------*/
+footer{	
+	position: relative;
+	overflow: hidden;
+	background-color: #ffffff;
+}
+.contact_title{
+	font-weight: 700;
+	text-transform: uppercase;	
+}
+.contact_container{
+	position: relative;
+	overflow-y: hidden;
+}
+
+.contact_info{
+	position: relative;
+	overflow: hidden;
+	padding: 10px 0px;
+}
+
+.contact_icon{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	float: left;
+}
+
+.contact_icon i{ color: #777777; }
+
+.contact_details{
+	margin: 0px;
+	padding: 5px 0px;
+	padding-left: 40px;
+	color: #777777;
+}
+
+
+@media (max-width: 768px){
+	.contact_container{
+		margin-bottom: 50px;
+	}
+}
+
+
+/*--------------------------------------------------------------
+#	Copyright
+--------------------------------------------------------------*/
+.copyright{
+	padding: 30px 0px;
+	background-color: #ffffff;
+	border-top: 1px solid #fafafa;
+}
+.copyright_text{
+	margin: 0px;
+	font-size: 1em;
+	color: #9e9e9e;
+}
+
+/*--------------------------------------------------------------
+#	Contact form style
+--------------------------------------------------------------*/
+.form-control{
+	background-color: transparent;
+	box-shadow: none;
+	padding: 20px 15px;
+	margin-bottom: 15px;
+	border: none;
+	border: 2px solid #cccccc;
+	border-radius: 0px;
+	width: 100%;
+	max-width: 100%;
+	color: #444444;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.form-control:focus{
+	outline: none;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+    outline: none !important;
+    border-color: #444444; 
+}
+
+.form-control::placeholder{
+	color: #999999;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.form-control::-webkit-placeholder{
+	color: #999999;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.form-control::-moz-placeholder{
+	color: #999999;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.form-control::-o-placeholder{
+	color: #999999;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.form-control::-ms-placeholder{
+	color: #999999;
+	font-size: 16px;
+	font-weight: 300;
+}

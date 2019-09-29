@@ -1,0 +1,103 @@
+/*!
+*	Theme Name 		: CODER.BITS
+    Description		: CODER.BITS is Multipurpose Bootstrap Template to showcase your personal portfolio work, designed for professional freelancers, individual designers & developers.
+* 	Framework Type 	: Bootstrap / Foundation / Flexbox / Materialize
+*	Author 			: UIGRID
+*	Author Profile 	: http://www.uigrid.com/
+* 	Author Email 	: hello@uigrid.com
+*	Version 		: 1.0
+*/
+
+/*--------------------------------------------------------------
+	TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.	Navbar - One page main menu
+2.	Main Cover
+3.	About Me
+4.	Project Counters
+5.	Client Testimonials
+-------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+#	Mobile Responsive Styles
+--------------------------------------------------------------*/
+@media (max-width: 767px){
+
+
+	/*--------------------------------------------------------------
+	1.	Navbar - One page main menu
+	--------------------------------------------------------------*/
+	.navbar-inverse .nav li a{
+		padding: 15px 25px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.navbar-inverse .navbar-toggle{
+		border: 0px;
+		margin: 0px;
+		padding: 27px 26px;
+	}
+	
+	.navbar-nav{margin: 0px -15px;}
+
+	.navbar-inverse .navbar-toggle:focus, 
+	.navbar-inverse .navbar-toggle:hover{
+		background-color: transparent;
+	}
+	.navbar-header .menu_active > .icon-bar{ background-color: #ec3237; }
+
+
+	/*--------------------------------------------------------------
+	2.	Main Cover
+	--------------------------------------------------------------*/
+	.cover{
+		height: 100vh;
+		background-position-x: 65% !important;
+	}
+
+	.cover_title{
+		font-size: 2.5em;
+	}
+
+	.section_scroll {bottom: 50px;}
+
+
+	/*--------------------------------------------------------------
+	3.	About Me
+	--------------------------------------------------------------*/
+	.profile_cover{margin-bottom: 30px;}
+
+
+	/*--------------------------------------------------------------
+	4.	Project Counters
+	--------------------------------------------------------------*/
+	.counter_box{background-repeat: repeat-y;}
+	.counter_wrap{margin-bottom: 30px;}
+
+
+	/*--------------------------------------------------------------
+	5.	Client Testimonials
+	--------------------------------------------------------------*/
+	.testimonial_box{background-repeat: repeat-y;}
+	.item_description{padding: 30px 15px;}
+
+}
+
+
+/*--------------------------------------------------------------
+#	Tablet (Ipad - Ipad pro) Responsive Styles
+--------------------------------------------------------------*/
+@media (min-width: 767px) and (max-width: 1023px){
+
+	/*--------------------------------------------------------------
+	1.	Main Cover
+	--------------------------------------------------------------*/
+	.cover{
+		background-position-x: 65% !important;
+		background-size: cover;
+	}
+
+
+}
